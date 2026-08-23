@@ -1,360 +1,930 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Sora:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <!--codigo google fonts-->
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <link rel="icon" href="imagens/1.png" type="image/svg+xml">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Primário -->
+    <title>Robo LED Partner | Personagens e Experiências para Eventos</title>
+    <meta name="description" content="Robôs de LED, personagens vivos e performances para transformar seu evento em uma experiência inesquecível. Solicite seu orçamento para festas, casamentos e eventos corporativos.">
+    <meta name="keywords" content="robô de led, personagens para festas, personagens vivos são paulo, robô tequileiro, entretenimento para eventos, atração para casamentos, debutante 15 anos, festa infantil sp, evento corporativo sp">
+    <meta name="author" content="Robo LED Partner">
+    <meta name="robots" content="index, follow">
 
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://roboledpartner.netlify.app/">
+    <meta property="og:title" content="Robo LED Partner | Personagens e Experiências para Eventos">
+    <meta property="og:description" content="Personagens que transformam eventos. Robôs de LED, personagens vivos e performances para surpreender seus convidados.">
+    <meta property="og:image" content="imagens/RoboSite (2).png">
 
-    <!--icons-->
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://roboledpartner.netlify.app/">
+    <meta property="twitter:title" content="Robo LED Partner | Personagens e Experiências para Eventos">
+    <meta property="twitter:description" content="Personagens que transformam eventos. Experiências que surpreendem, divertem e ficam na memória.">
+    <meta property="twitter:image" content="imagens/RoboSite (2).png">
 
-    <script src="menu.js" defer></script>
-    <title>ROBOLED PARTNER</title>
-  </head>
-  <body>
-    <header>
-      <div class="interface">
-        <div class="logo">
-          <a href="#">
-            <img src="imagens/logo.png" alt="logo" height="70px" />
-          </a>
-        </div>
-        <!--logo-->
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/logo.png" type="image/png">
 
-        <nav class="menu-desktop">
-          <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#diferenciais">Diferenciais</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#fotos">Fotos</a></li>
-            <li><a href="#contato">Contatos</a></li>
-          </ul>
-        </nav>
+    <!-- Google Fonts: Poppins & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <div class="btn-contato">
-          <a
-            href="https://api.whatsapp.com/send/?phone=11919973647&text&type=phone_number&app_absent=0"
-            target="_blank"
-          >
-            <button>Contratar</button>
-          </a>
-        </div>
-        <!--btn-contato-->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-        <div class="btn-abrir-menu" id="btn-menu">
-          <i class="bi bi-list"></i>
-        </div>
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <div class="menu-mobile" id="menu-mobile">
-          <div class="btn-fechar">
-            <i class="bi bi-x-octagon"></i>
-          </div>
+    <!-- Header & Navegação -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#inicio" class="header__logo" aria-label="Página inicial da Robo LED Partner">
+                <img src="imagens/logo.png" alt="Robo LED Partner Logo" width="160" height="auto">
+            </a>
 
-          <nav>
-            <ul>
-              <li><a href="#inicio">Início</a></li>
-              <li><a href="#diferenciais">Diferenciais</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#fotos">Fotos</a></li>
-              <li><a href="#contato">Contatos</a></li>
-            </ul>
-          </nav>
-        </div>
-        <!--menu-mobile-->
+            <!-- Navegação Desktop -->
+            <nav class="nav" id="nav-menu" aria-label="Navegação Principal">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link active">Início</a></li>
+                    <li class="nav__item"><a href="#experiencias" class="nav__link">Experiências</a></li>
+                    <li class="nav__item"><a href="#personagens" class="nav__link">Personagens</a></li>
+                    <li class="nav__item"><a href="#eventos" class="nav__link">Eventos</a></li>
+                    <li class="nav__item"><a href="#galeria" class="nav__link">Galeria</a></li>
+                    <li class="nav__item"><a href="#diferenciais" class="nav__link">Diferenciais</a></li>
+                    <li class="nav__item"><a href="#corporativo" class="nav__link">Corporativo</a></li>
+                    <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+                </ul>
+            </nav>
 
-        <div class="overlay-menu" id="overlay-menu"></div>
-      </div>
-      <!--interface-->
+            <div class="header__actions">
+                <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary header__btn">
+                    <i class="bi bi-whatsapp"></i>
+                    <span>Orçamento</span>
+                </a>
 
-      <main>
-        <section class="topo-do-site" id="inicio">
-          <div class="interface">
-            <div class="flex">
-              <div class="txt-topo-site">
-                <h1>EXPERIÊNCIAS QUE TRANSFORMAM SUA FESTA</h1>
-                <p>
-                Do Robô LED aos Personagens Vivos, levamos diversão, interação e momentos inesquecíveis para o seu evento!
-                </p>
-
-                <div class="btn-contato">
-                  <a
-                    href="https://api.whatsapp.com/send/?phone=11919973647&text&type=phone_number&app_absent=0"
-                    target="_blank"
-                  >
-                    <button>Entre em contato</button>
-                  </a>
-                </div>
-                <!--btn-contato-->
-              </div>
-              <!--txt-topo-site-->
-
-              <div class="img-topo-site">
-                <img
-                  src="imagens/RoboSite (2).png"
-                  alt="imagemluan"
-                  height="630px"
-                />
-              </div>
-              <!--img-topo-site-->
+                <!-- Botão Menu Mobile -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false" aria-controls="nav-drawer">
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                </button>
             </div>
-            <!--flex-->
-          </div>
-          <!--interce-->
-        </section>
-        <!--topo-do-site-->
-
-        <section class="diferenciais" id="diferenciais">
-          <div class="interface">
-            <h2 class="titulo">DIFERENCIAIS DE TER A <span>ROBOLED PARTNER NA SUA FESTA</span></h2>
-            <div class="flex">
-              <div class="diferenciais-box">
-                <i class="bi bi-cake"></i>
-                <h3>Animação garantida</h3>
-                <p>
-                Levamos personagens e atrações que interagem com o público e tornam cada momento muito mais divertido.
-                </p>
-              </div>
-              <!--diferenciais-box1-->
-
-              <div class="diferenciais-box">
-                <i class="bi bi-lightning-charge"></i>
-                <h3>Experiências que impressionam</h3>
-                <p>
-                  Robô LED, personagens e performances que transformam qualquer evento em uma experiência memorável.
-                </p>
-              </div>
-              <!--diferenciais-box2-->
-
-              <div class="diferenciais-box">
-                <i class="bi bi-balloon-heart"></i>
-                <h3>Diversão para todas as idades</h3>
-                <p>
-                  Crianças, jovens e adultos entram na brincadeira e aproveitam juntos cada momento da apresentação.
-                </p>
-              </div>
-
-              <div class="diferenciais-box">
-                <i class="bi bi-camera"></i>
-                <h3>Fotos e vídeos inesquecíveis</h3>
-                <p>
-                  Momentos especiais, encontros com personagens e registros incríveis para guardar e compartilhar.
-                </p>
-              </div>
-
-              <div class="diferenciais-box">
-                <i class="bi bi-currency-dollar"></i>
-                <h3>Preço acessível</h3>
-                <p>
-                  Atrações pensadas para diferentes tipos de festa e necessidades, com opções que cabem no seu evento.
-                </p>
-              </div>
-
-              <div class="diferenciais-box">
-                <i class="bi bi-check2-all"></i>
-                <h3>Equipe especializada</h3>
-                <p>
-                  Profissionais preparados para conduzir cada apresentação com energia, organização, segurança e muita interação.
-                </p>
-              </div>
-            </div>
-            <!--flex-->
-          </div>
-          <!--interface>-->
-        </section>
-        <!--diferenciais-->
-
-        <section class="sobre" id="sobre">
-          <div class="interface">
-            <div class="flex">
-              <div class="txt-sobre">
-                <h2>MUITO PRAZER, <span>SOMOS A ROBOLED PARTNER.</span></h2>
-                <p>
-                  Com mais de 5 anos de experiência, a Roboled Partner atua no segmento de entretenimento e animação de eventos, levando diversão, energia e experiências marcantes para todos os públicos.
-                  Hoje, nossa equipe reúne Robô LED e Personagens Vivos, criando atrações que vão muito além de uma simples apresentação. Nosso objetivo é transformar cada evento em um momento especial, com interação, emoção, fotos e muita diversão.
-                  Estamos presentes em toda a região do ABC, São Paulo e Litoral, sempre buscando oferecer um atendimento profissional, atrações de qualidade e uma experiência que realmente faça a diferença no seu evento.
-                </p>
-                <p>
-                  Escolha sua atração, reúna seus convidados e deixe a Roboled Partner transformar seu evento em uma experiência inesquecível!
-                </p>
-                <div class="btn-social">
-                  <a
-                    href="https://www.instagram.com/roboledpartner/"
-                    target="_blank"
-                    ><button><i class="bi bi-instagram"></i></button
-                  ></a>
-                  <a href="https://api.whatsapp.com/send/?phone=11919973647&text&type=phone_number&app_absent=0" target="_blank"
-                    ><button><i class="bi bi-whatsapp"></i></i></button
-                  ></a>
-                </div>
-                <!--btn-social-->
-              </div>
-              <!--txt-diferenciais-->
-            </div>
-            <!--flex-->
-          </div>
-          <!--interface-->
-        </section>
-        <!--diferenciais-->
-
-        <section class="fotos" id="fotos">
-          <div class="interface">
-            <h2 class="titulo">NOSSAS <span> ATRAÇÕES</span></h2>
-            <div class="flex">
-              <a href="https://www.instagram.com/roboledpartner/" target="_blank">
-                <div
-                  class="img-port"
-                  style="background-image: url(imagens/robo2.jpg)"
-                >
-                  <div class="overlay">
-                    <p>ROBOLED PARTNER</p>
-                  </div>
-                </div></a
-              >
-
-              <a href="https://www.instagram.com/roboledpartner/" target="_blank">
-                <div
-                  class="img-port"
-                  style="background-image: url(imagens/mk1.jpg.jpeg)"
-                >
-                  <div class="overlay">
-                    <p>MICKEY</p>
-                  </div>
-                </div></a
-              >
-
-              <a href="https://www.instagram.com/roboledpartner/" target="_blank">
-                <div
-                  class="img-port"
-                  style="background-image: url(imagens/mn.jpg.jpeg)"
-                >
-                  <div class="overlay">
-                    <p>MINNIE</p>
-                  </div>
-                </div></a
-              >
-              <a href="https://www.instagram.com/roboledpartner/" target="_blank">
-                <div
-                  class="img-port"
-                  style="background-image: url(imagens/sonic\ 2.jpg.jpeg)"
-                >
-                  <div class="overlay">
-                    <p>SONIC</p>
-                  </div>
-                </div></a
-              >
-              <a href="https://www.instagram.com/roboledpartner/" target="_blank">
-                <div
-                  class="img-port"
-                  style="background-image: url(imagens/h-aranha.png)"
-                >
-                  <div class="overlay">
-                    <p>HOMEM-ARANHA</p>
-                  </div>
-                </div></a
-              >
-              <a href="https://www.instagram.com/roboledpartner/" target="_blank">
-                <div
-                  class="img-port"
-                  style="background-image: url(imagens/la-cas.jpg)"
-                >
-                  <div class="overlay">
-                    <p>LA-CASA</p>
-                  </div>
-                </div></a
-              >
-              <a href="https://www.instagram.com/roboledpartner/" target="_blank">
-                <div
-                  class="img-port"
-                  style="background-image: url(imagens/skye.png)"
-                >
-                  <div class="overlay">
-                    <p>SKYE</p>
-                  </div>
-                </div></a
-              >
-              <a href="https://www.instagram.com/roboledpartner/" target="_blank">
-                <div
-                  class="img-port"
-                  style="background-image: url(imagens/marsho.png)"
-                >
-                  <div class="overlay">
-                    <p>MARSHO</p>
-                  </div>
-                </div></a
-              >
-              <a href="https://www.instagram.com/roboledpartner/" target="_blank">
-                <div
-                  class="img-port"
-                  style="background-image: url(imagens/policia.jpg.jpeg)"
-                >
-                  <div class="overlay">
-                    <p>CHASE</p>
-                  </div>
-                </div></a
-              >
-            </div>
-            <!--flex-->
-          </div>
-          <!--interface-->
-        </section>
-        <!--fotos-->
-      </main>
-
-      <footer>
-        <div class="interface">
-          <div class="line-footer borda">
-            <div class="flex">
-              <div class="logo-footer">
-                <img src="imagens/logo.png" alt="logo-footer" height="100px" />
-              </div>
-              <!--logo-footer-->
-              <div class="btn-social">
-                <a
-                  href="https://www.instagram.com/luanchaaves11/"
-                  target="_blank"
-                  ><button><i class="bi bi-instagram"></i></button
-                ></a>
-                <a href="https://api.whatsapp.com/send/?phone=11919973647&text&type=phone_number&app_absent=0" target="_blank"
-                  ><button><i class="bi bi-whatsapp"></i></button
-                ></a>
-              </div>
-              <!--btn-social-->
-            </div>
-            <!--flex-->
-          </div>
-          <!--line-footer-->
-
-          <div class="line-footer">
-            <p>
-              <i class="bi bi-envelope-fill"></i
-              ><a href="mailto:roboledpartner@gmail.com"
-                >roboledpartner@gmail.com</a
-              >
-            </p>
-          </div>
-          <!--line-footer-->
-          4
         </div>
-        <!--interface-footer-->
-      </footer>
     </header>
-  </body>
+
+    <!-- Drawer Mobile Menu -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-drawer__header">
+            <img src="imagens/logo.png" alt="Robo LED Partner" class="nav-drawer__logo">
+            <button class="nav-drawer__close" id="drawer-close" aria-label="Fechar Menu">&times;</button>
+        </div>
+        <ul class="nav-drawer__list">
+            <li><a href="#inicio" class="nav-drawer__link">Início</a></li>
+            <li><a href="#experiencias" class="nav-drawer__link">Experiências</a></li>
+            <li><a href="#personagens" class="nav-drawer__link">Personagens</a></li>
+            <li><a href="#eventos" class="nav-drawer__link">Eventos</a></li>
+            <li><a href="#galeria" class="nav-drawer__link">Galeria Real</a></li>
+            <li><a href="#diferenciais" class="nav-drawer__link">Diferenciais</a></li>
+            <li><a href="#como-funciona" class="nav-drawer__link">Como Funciona</a></li>
+            <li><a href="#corporativo" class="nav-drawer__link">Corporativo</a></li>
+            <li><a href="#contato" class="nav-drawer__link">Contato</a></li>
+        </ul>
+        <div class="nav-drawer__footer">
+            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                <i class="bi bi-whatsapp"></i> Solicitar Orçamento
+            </a>
+            <p class="nav-drawer__contact"><i class="bi bi-telephone"></i> (11) 91997-3647</p>
+        </div>
+    </div>
+
+    <main id="main-content">
+
+        <!-- 1. HERO SECTION -->
+        <section class="hero" id="inicio">
+            <div class="hero__glow hero__glow--1"></div>
+            <div class="hero__glow hero__glow--2"></div>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <span class="hero__badge-dot"></span>
+                        <span>Experiências &amp; Entretenimento para Eventos</span>
+                    </div>
+
+                    <h1 class="hero__title">
+                        Personagens que <span class="text-highlight">transformam</span> eventos.
+                    </h1>
+
+                    <p class="hero__subtitle">
+                        Experiências que surpreendem, divertem e ficam na memória. Robôs de LED, personagens temáticos e performances para tornar seu evento único e inesquecível.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+                            <i class="bi bi-whatsapp"></i>
+                            <span>SOLICITAR ORÇAMENTO</span>
+                        </a>
+                        <a href="#personagens" class="btn btn--secondary btn--lg">
+                            <span>Conhecer Personagens</span>
+                            <i class="bi bi-arrow-down-short"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="hero__trust">
+                        <div class="trust-item">
+                            <i class="bi bi-shield-check text-pink"></i>
+                            <span>+5 anos de experiência</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="bi bi-geo-alt text-pink"></i>
+                            <span>SP, ABC, Litoral e Interior</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="bi bi-fire text-pink"></i>
+                            <span>Efeitos especiais inclusos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="hero__image-wrapper">
+                        <div class="hero__image-backdrop"></div>
+                        <img src="imagens/RoboSite (2).png" alt="Robô de LED em performance com iluminação dinâmica" class="hero__img" width="540" height="auto" fetchpriority="high">
+                        <div class="floating-badge floating-badge--top">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                            <div>
+                                <strong>Show de Impacto</strong>
+                                <span>CO2 + Sparkular</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge floating-badge--bottom">
+                            <i class="bi bi-stars"></i>
+                            <div>
+                                <strong>Interação Total</strong>
+                                <span>Pista 100% animada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SEÇÃO — NOSSAS EXPERIÊNCIAS -->
+        <section class="section experiences" id="experiencias">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">O que oferecemos</span>
+                    <h2 class="section-title">Muito mais que um personagem. <span class="text-highlight">Uma experiência.</span></h2>
+                    <p class="section-description">
+                        Atrações completas com efeitos visuais, interação e muita energia para fazer seus convidados vibrarem do início ao fim.
+                    </p>
+                </div>
+
+                <div class="experiences__grid">
+                    <!-- Card 1: Robôs de LED -->
+                    <article class="exp-card">
+                        <div class="exp-card__media">
+                            <img src="imagens/Robo1.jpg" alt="Performance de Robô de LED gigante iluminado" loading="lazy">
+                            <span class="exp-card__category">Alta Tecnologia</span>
+                        </div>
+                        <div class="exp-card__body">
+                            <div class="exp-card__icon"><i class="bi bi-robot"></i></div>
+                            <h3 class="exp-card__title">Robôs de LED</h3>
+                            <p class="exp-card__text">Performances visuais e tecnológicas impressionantes. Robôs gigantes com iluminação dinâmica, canhões de CO2 e efeitos de fogo frio.</p>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20Rob%C3%B4s%20de%20LED%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="exp-card__link">
+                                <span>Quero Robô de LED</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Personagens Vivos -->
+                    <article class="exp-card">
+                        <div class="exp-card__media">
+                            <img src="imagens/sonic 2.jpg.jpeg" alt="Personagens vivos interagindo com convidados" loading="lazy">
+                            <span class="exp-card__category">Magia &amp; Interação</span>
+                        </div>
+                        <div class="exp-card__body">
+                            <div class="exp-card__icon"><i class="bi bi-emoji-smile"></i></div>
+                            <h3 class="exp-card__title">Personagens Vivos</h3>
+                            <p class="exp-card__text">Personagens icônicos para encantar crianças e adultos. Presença cênica, recepção de convidados, brincadeiras e muitas fotos inesquecíveis.</p>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20Personagens%20Vivos%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="exp-card__link">
+                                <span>Quero Personagens</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Performances & Pista -->
+                    <article class="exp-card">
+                        <div class="exp-card__media">
+                            <img src="imagens/robo4.jpg" alt="Performance tequileiro e efeitos na pista de dança" loading="lazy">
+                            <span class="exp-card__category">Energia Máxima</span>
+                        </div>
+                        <div class="exp-card__body">
+                            <div class="exp-card__icon"><i class="bi bi-lightning-charge"></i></div>
+                            <h3 class="exp-card__title">Performances de Pista</h3>
+                            <p class="exp-card__text">Entradas triunfais, robôs tequileiros com distribuição de shots, coreografias e momentos explosivos que não deixam ninguém parado.</p>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20uma%20performance%20de%20pista%20com%20Tequileiro%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="exp-card__link">
+                                <span>Quero Performance</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 4: Experiências Corporativas -->
+                    <article class="exp-card">
+                        <div class="exp-card__media">
+                            <img src="imagens/robo2.jpg" alt="Ativação de marca com robô e multidão" loading="lazy">
+                            <span class="exp-card__category">B2B &amp; Ativações</span>
+                        </div>
+                        <div class="exp-card__body">
+                            <div class="exp-card__icon"><i class="bi bi-building"></i></div>
+                            <h3 class="exp-card__title">Ativações Corporativas</h3>
+                            <p class="exp-card__text">Atrações exclusivas para stands de feiras, lançamentos, inaugurações de lojas e convenções empresariais gerando alto engajamento.</p>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20uma%20proposta%20de%20experi%C3%AAncia%20para%20evento%20corporativo." target="_blank" rel="noopener noreferrer" class="exp-card__link">
+                                <span>Quero para Empresa</span> <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SEÇÃO — PERSONAGENS -->
+        <section class="section characters" id="personagens">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Catálogo Oficial</span>
+                    <h2 class="section-title">Conheça Nossos <span class="text-highlight">Personagens &amp; Atrações</span></h2>
+                    <p class="section-description">
+                        Personagens reais, figurinos impecáveis e artistas dedicados a entregar o melhor show para seus convidados.
+                    </p>
+                </div>
+
+                <!-- Filtros de Categoria -->
+                <div class="char-filters" role="tablist" aria-label="Filtrar Personagens">
+                    <button class="char-filter active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+                    <button class="char-filter" data-filter="led" role="tab" aria-selected="false">Robôs de LED</button>
+                    <button class="char-filter" data-filter="infantil" role="tab" aria-selected="false">Infantis &amp; Família</button>
+                    <button class="char-filter" data-filter="tematico" role="tab" aria-selected="false">Temáticos &amp; Ação</button>
+                </div>
+
+                <!-- Grid de Personagens -->
+                <div class="char-grid" id="char-grid">
+
+                    <!-- 1. Robô Nextrom -->
+                    <article class="char-card" data-category="led">
+                        <div class="char-card__media">
+                            <img src="imagens/Robo1.jpg" alt="Robô de LED Nextrom com iluminação neon" loading="lazy">
+                            <span class="char-badge char-badge--led"><i class="bi bi-lightning-fill"></i> Robô de LED</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">Robô de LED Nextrom</h3>
+                            <p class="char-card__desc">Gigante tecnológico com armadura iluminada em LED multicolorido, efeitos dinâmicos, canhão de fumaça CO2 e fogo frio eletrônico.</p>
+                            <div class="char-card__tags">
+                                <span>Cilindro CO2</span>
+                                <span>Fogo Sparkular</span>
+                                <span>Pista de Dança</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Rob%C3%B4%20de%20LED%20Nextrom%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 2. Robô Tequileiro -->
+                    <article class="char-card" data-category="led">
+                        <div class="char-card__media">
+                            <img src="imagens/robo4.jpg" alt="Robô de LED Tequileiro em festa" loading="lazy">
+                            <span class="char-badge char-badge--led"><i class="bi bi-fire"></i> Robô de LED</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">Robô Tequileiro</h3>
+                            <p class="char-card__desc">A sensação das pistas de dança! Visual temático marcante, interação energética com os convidados, disparos de CO2 e rodadas de shots.</p>
+                            <div class="char-card__tags">
+                                <span>Animação de Pista</span>
+                                <span>Interação Shots</span>
+                                <span>Casamentos &amp; 15 Anos</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Rob%C3%B4%20Tequileiro%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 3. Homem-Aranha -->
+                    <article class="char-card" data-category="tematico">
+                        <div class="char-card__media">
+                            <img src="imagens/h-aranha.png" alt="Personagem Homem-Aranha em pose de ação" loading="lazy">
+                            <span class="char-badge char-badge--theme"><i class="bi bi-shield-shaded"></i> Super-Herói</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">Homem-Aranha</h3>
+                            <p class="char-card__desc">Presença marcante com acrobacias, poses clássicas dos quadrinhos, brincadeiras interativas e fotos memoráveis com fãs de todas as idades.</p>
+                            <div class="char-card__tags">
+                                <span>Acrobacias</span>
+                                <span>Fotos Temáticas</span>
+                                <span>Aniversários Infantis</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20personagem%20Homem-Aranha%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 4. Sonic -->
+                    <article class="char-card" data-category="infantil">
+                        <div class="char-card__media">
+                            <img src="imagens/sonic 2.jpg.jpeg" alt="Personagem Sonic vivo" loading="lazy">
+                            <span class="char-badge char-badge--kids"><i class="bi bi-star-fill"></i> Clássico Infantil</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">Sonic</h3>
+                            <p class="char-card__desc">Extremamente carismático, cheio de agilidade e energia contagiante. O ouriço azul mais amado do mundo para animar sua festa infantil.</p>
+                            <div class="char-card__tags">
+                                <span>Dança &amp; Diversão</span>
+                                <span>Recepção</span>
+                                <span>Gamer / Games</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20personagem%20Sonic%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 5. Mickey Mouse -->
+                    <article class="char-card" data-category="infantil">
+                        <div class="char-card__media">
+                            <img src="imagens/mk1.jpg.jpeg" alt="Personagem Mickey em traje de gala" loading="lazy">
+                            <span class="char-badge char-badge--kids"><i class="bi bi-heart-fill"></i> Magia Clássica</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">Mickey Mouse</h3>
+                            <p class="char-card__desc">Elegância e magia em traje clássico de gala. Encanta gerações, conduz o momento do parabéns e gera fotos perfeitas para o álbum de família.</p>
+                            <div class="char-card__tags">
+                                <span>Traje de Gala</span>
+                                <span>Momento Parabéns</span>
+                                <span>1º a 5 Aninhos</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Mickey%20Mouse%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 6. Minnie Mouse -->
+                    <article class="char-card" data-category="infantil">
+                        <div class="char-card__media">
+                            <img src="imagens/mn.jpg.jpeg" alt="Personagem Minnie Mouse com vestido vermelho de bolinhas" loading="lazy">
+                            <span class="char-badge char-badge--kids"><i class="bi bi-heart-fill"></i> Magia Clássica</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">Minnie Mouse</h3>
+                            <p class="char-card__desc">Toda a delicadeza e encanto da personagem com seu icônico vestido de bolinhas vermelhas. Perfeita em dupla com o Mickey para festas temáticas.</p>
+                            <div class="char-card__tags">
+                                <span>Vestido Clássico</span>
+                                <span>Fotos Encantadoras</span>
+                                <span>Dupla com Mickey</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Minnie%20Mouse%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 7. La Casa de Papel -->
+                    <article class="char-card" data-category="tematico">
+                        <div class="char-card__media">
+                            <img src="imagens/la-cas.jpg" alt="Personagens La Casa de Papel com macacão vermelho e máscaras" loading="lazy">
+                            <span class="char-badge char-badge--theme"><i class="bi bi-mask"></i> Sucesso Mundial</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">La Casa de Papel</h3>
+                            <p class="char-card__desc">Invasão temática e cheia de suspense! Macacões vermelhos originais, máscaras de Salvador Dalí e trilha sonora marcante para surpreender a todos.</p>
+                            <div class="char-card__tags">
+                                <span>Invasão de Pista</span>
+                                <span>Interação &amp; Suspense</span>
+                                <span>Debutantes &amp; Adultos</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20personagens%20La%20Casa%20de%20Papel%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 8. Patrulha Canina: Chase -->
+                    <article class="char-card" data-category="infantil">
+                        <div class="char-card__media">
+                            <img src="imagens/policia.jpg.jpeg" alt="Personagem Chase Patrulha Canina" loading="lazy">
+                            <span class="char-badge char-badge--kids"><i class="bi bi-paw-fill"></i> Patrulha Canina</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">Chase (Patrulha Canina)</h3>
+                            <p class="char-card__desc">O pastor alemão policial líder da patrulha! Fantasia de altíssima qualidade em tamanho vivo para fazer o dia dos pequenos inesquecível.</p>
+                            <div class="char-card__tags">
+                                <span>Líder da Patrulha</span>
+                                <span>Interação Infantil</span>
+                                <span>Aniversários</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Chase%20da%20Patrulha%20Canina%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 9. Patrulha Canina: Skye -->
+                    <article class="char-card" data-category="infantil">
+                        <div class="char-card__media">
+                            <img src="imagens/skye.png" alt="Personagem Skye Patrulha Canina" loading="lazy">
+                            <span class="char-badge char-badge--kids"><i class="bi bi-paw-fill"></i> Patrulha Canina</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">Skye (Patrulha Canina)</h3>
+                            <p class="char-card__desc">A filhote piloto mais doce e destemida. Traz alegria, carinho e um momento mágico para crianças que amam aventuras no céu.</p>
+                            <div class="char-card__tags">
+                                <span>Piloto da Patrulha</span>
+                                <span>Carinho &amp; Fotos</span>
+                                <span>Festas Infantis</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Skye%20da%20Patrulha%20Canina%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 10. Patrulha Canina: Marshall -->
+                    <article class="char-card" data-category="infantil">
+                        <div class="char-card__media">
+                            <img src="imagens/marsho.png" alt="Personagem Marshall Patrulha Canina" loading="lazy">
+                            <span class="char-badge char-badge--kids"><i class="bi bi-paw-fill"></i> Patrulha Canina</span>
+                        </div>
+                        <div class="char-card__content">
+                            <h3 class="char-card__name">Marshall (Patrulha Canina)</h3>
+                            <p class="char-card__desc">O dálmata bombeiro mais animado e desastrado! Garante risadas contagiantes, brincadeiras na pista e momentos de pura diversão.</p>
+                            <div class="char-card__tags">
+                                <span>Bombeiro da Patrulha</span>
+                                <span>Muita Energia</span>
+                                <span>Festas Infantis</span>
+                            </div>
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Marshall%20da%20Patrulha%20Canina%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                                <i class="bi bi-whatsapp"></i> Quero este personagem
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="text-center margin-top-lg">
+                    <p class="text-muted" style="margin-bottom: 1rem;">Procura uma atração ou personagem personalizado para seu evento?</p>
+                    <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20disponibilidade%20de%20personagens%20para%20a%20data%20do%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+                        <i class="bi bi-chat-dots"></i> Consultar disponibilidade de data
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SEÇÃO — PARA QUAL EVENTO? -->
+        <section class="section events-types" id="eventos">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Versatilidade</span>
+                    <h2 class="section-title">Para Qual <span class="text-highlight">Tipo de Evento?</span></h2>
+                    <p class="section-description">
+                        Nossas atrações se adaptam ao formato do seu espaço e ao perfil dos seus convidados.
+                    </p>
+                </div>
+
+                <div class="events__grid">
+                    <!-- Evento 1: Aniversários -->
+                    <div class="event-card">
+                        <div class="event-card__icon-wrapper">
+                            <i class="bi bi-cake2"></i>
+                        </div>
+                        <h3 class="event-card__title">Aniversários</h3>
+                        <p class="event-card__desc">Personagens para surpreender aniversariantes de todas as idades, desde o primeiro aninho até comemorações adultas e baladas.</p>
+                        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20festa%20de%20Anivers%C3%A1rio." target="_blank" rel="noopener noreferrer" class="event-card__link">
+                            Orçamento para Aniversário <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Evento 2: Casamentos -->
+                    <div class="event-card">
+                        <div class="event-card__icon-wrapper">
+                            <i class="bi bi-heart-half"></i>
+                        </div>
+                        <h3 class="event-card__title">Casamentos</h3>
+                        <p class="event-card__desc">Uma atração surpresa de alto impacto para a abertura da pista de dança com robô tequileiro, canhão de CO2 e fogos frios.</p>
+                        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Casamento." target="_blank" rel="noopener noreferrer" class="event-card__link">
+                            Orçamento para Casamento <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Evento 3: Debutantes (15 Anos) -->
+                    <div class="event-card">
+                        <div class="event-card__icon-wrapper">
+                            <i class="bi bi-gem"></i>
+                        </div>
+                        <h3 class="event-card__title">Debutantes &amp; 15 Anos</h3>
+                        <p class="event-card__desc">Momento balada inesquecível! Robô Nextrom e performances temáticas para transformar a pista em um festival de música.</p>
+                        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20festa%20de%2015%20Anos%20%2F%20Debutante." target="_blank" rel="noopener noreferrer" class="event-card__link">
+                            Orçamento para 15 Anos <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Evento 4: Corporativo -->
+                    <div class="event-card">
+                        <div class="event-card__icon-wrapper">
+                            <i class="bi bi-briefcase"></i>
+                        </div>
+                        <h3 class="event-card__title">Eventos Corporativos</h3>
+                        <p class="event-card__desc">Convenções, festas de fim de ano e premiações que impressionam colaboradores, parceiros e clientes com tecnologia e inovação.</p>
+                        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Evento%20Corporativo." target="_blank" rel="noopener noreferrer" class="event-card__link">
+                            Orçamento Corporativo <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Evento 5: Inaugurações & Ativações -->
+                    <div class="event-card">
+                        <div class="event-card__icon-wrapper">
+                            <i class="bi bi-shop"></i>
+                        </div>
+                        <h3 class="event-card__title">Inaugurações &amp; Ativações</h3>
+                        <p class="event-card__desc">Atrações que atraem multidões, movimentam a porta de lojas, shoppings, concessionárias e aumentam o fluxo de clientes.</p>
+                        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Inaugura%C3%A7%C3%A3o%20%2F%20Ativa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="event-card__link">
+                            Orçamento para Ativação <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Evento 6: Formaturas & Baladas -->
+                    <div class="event-card">
+                        <div class="event-card__icon-wrapper">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+                        <h3 class="event-card__title">Formaturas &amp; Baladas</h3>
+                        <p class="event-card__desc">A energia certa para celebrar o fechamento de um grande ciclo acadêmico com muita fumaça, luzes e interação contagiante.</p>
+                        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Formatura." target="_blank" rel="noopener noreferrer" class="event-card__link">
+                            Orçamento para Formatura <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SEÇÃO — GALERIA REAL -->
+        <section class="section gallery" id="galeria">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">100% Fotos Reais</span>
+                    <h2 class="section-title">Essa experiência <span class="text-highlight">acontece de verdade</span></h2>
+                    <p class="section-description">
+                        Veja registros reais de nossos shows, performances e a reação genuína do público em eventos por todo o estado de São Paulo.
+                    </p>
+                </div>
+
+                <div class="gallery__grid">
+                    <!-- Foto 1: Multidão com Robô -->
+                    <div class="gallery__item gallery__item--wide" data-src="imagens/robo2.jpg" data-caption="Robô de LED interagindo com grande público e fãs em evento">
+                        <img src="imagens/robo2.jpg" alt="Multidão e convidados tirando fotos com Robô de LED" loading="lazy">
+                        <div class="gallery__overlay">
+                            <i class="bi bi-zoom-in"></i>
+                            <span class="gallery__caption">Interação com o Público</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 2: Pista com Fumaça CO2 -->
+                    <div class="gallery__item gallery__item--tall" data-src="imagens/robo4.jpg" data-caption="Performance na pista de dança com jatos de fumaça CO2">
+                        <img src="imagens/robo4.jpg" alt="Robô de LED soltando fumaça CO2 na pista de dança" loading="lazy">
+                        <div class="gallery__overlay">
+                            <i class="bi bi-zoom-in"></i>
+                            <span class="gallery__caption">Show com Canhão de CO2</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 3: Robô no Aniversário Neon -->
+                    <div class="gallery__item" data-src="imagens/Robo1.jpg" data-caption="Robô de LED Nextrom em festa de aniversário temática">
+                        <img src="imagens/Robo1.jpg" alt="Robô de LED Nextrom em festa de aniversário" loading="lazy">
+                        <div class="gallery__overlay">
+                            <i class="bi bi-zoom-in"></i>
+                            <span class="gallery__caption">Presença Imponente</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 4: Família & Crianças -->
+                    <div class="gallery__item" data-src="imagens/robo3 (1).jpg" data-caption="Robô de LED reunido com família e crianças felizes">
+                        <img src="imagens/robo3 (1).jpg" alt="Família e crianças reunidas com Robô de LED" loading="lazy">
+                        <div class="gallery__overlay">
+                            <i class="bi bi-zoom-in"></i>
+                            <span class="gallery__caption">Momentos em Família</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 5: La Casa de Papel -->
+                    <div class="gallery__item" data-src="imagens/la-cas.jpg" data-caption="Personagens La Casa de Papel em apresentação temática">
+                        <img src="imagens/la-cas.jpg" alt="Personagens La Casa de Papel com macacão vermelho" loading="lazy">
+                        <div class="gallery__overlay">
+                            <i class="bi bi-zoom-in"></i>
+                            <span class="gallery__caption">La Casa de Papel</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 6: Sonic & Interação -->
+                    <div class="gallery__item" data-src="imagens/sonic 2.jpg.jpeg" data-caption="Personagem Sonic animando festa infantil">
+                        <img src="imagens/sonic 2.jpg.jpeg" alt="Personagem Sonic em festa infantil" loading="lazy">
+                        <div class="gallery__overlay">
+                            <i class="bi bi-zoom-in"></i>
+                            <span class="gallery__caption">Sonic em Ação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SEÇÃO — POR QUE A ROBO LED PARTNER? -->
+        <section class="section differentials" id="diferenciais">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Nossos Diferenciais</span>
+                    <h2 class="section-title">Por que escolher a <span class="text-highlight">Robo LED Partner?</span></h2>
+                    <p class="section-description">
+                        Compromisso com pontualidade, segurança, estética impecável e a garantia de que seu evento será um sucesso absoluto.
+                    </p>
+                </div>
+
+                <div class="diff__grid">
+                    <div class="diff-card">
+                        <div class="diff-card__icon"><i class="bi bi-stars"></i></div>
+                        <h3 class="diff-card__title">Experiência &amp; Interação</h3>
+                        <p class="diff-card__text">Nossos artistas não apenas posam para fotos — eles entram na pista, dançam com os convidados, lideram brincadeiras e contagiam o ambiente.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-card__icon"><i class="bi bi-fire"></i></div>
+                        <h3 class="diff-card__title">Efeitos Especiais Inclusos</h3>
+                        <p class="diff-card__text">Cilindro de CO2 criogênico e fogo eletrônico (Sparkular / faísca fria, 100% seguro para ambientes internos e sem cheiro de fumaça).</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-card__icon"><i class="bi bi-award"></i></div>
+                        <h3 class="diff-card__title">+5 Anos de Mercado</h3>
+                        <p class="diff-card__text">Mais de 5 anos de atuação sólida e centenas de eventos realizados com excelência no Grande ABC, Capital, Litoral e Interior Paulista.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <div class="diff-card__icon"><i class="bi bi-shield-check"></i></div>
+                        <h3 class="diff-card__title">Profissionalismo &amp; Pontualidade</h3>
+                        <p class="diff-card__text">Equipe de apoio treinada, pontualidade rigorosa no cronograma do seu evento e suporte completo antes e durante a apresentação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. SEÇÃO — COMO FUNCIONA -->
+        <section class="section how-it-works" id="como-funciona">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Passo a Passo Simples</span>
+                    <h2 class="section-title">Como Funciona a <span class="text-highlight">Contratação</span></h2>
+                    <p class="section-description">
+                        Processo rápido e descomplicado para você garantir a atração do seu evento em poucos minutos.
+                    </p>
+                </div>
+
+                <div class="steps__grid">
+                    <div class="step-card">
+                        <div class="step-card__num">01</div>
+                        <h3 class="step-card__title">Conte seu evento</h3>
+                        <p class="step-card__text">Envie uma mensagem informando data, local, tipo de festa e horário previsto da apresentação.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-card__num">02</div>
+                        <h3 class="step-card__title">Escolha a atração</h3>
+                        <p class="step-card__text">Apresentamos os personagens, robôs e formatos de show ideais para o estilo do seu público.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-card__num">03</div>
+                        <h3 class="step-card__title">Receba a proposta</h3>
+                        <p class="step-card__text">Enviamos um orçamento transparente e personalizado, com condições facilitadas e garantia de data.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-card__num">04</div>
+                        <h3 class="step-card__title">Viva o momento</h3>
+                        <p class="step-card__text">Nossa equipe cuida de toda a estrutura e performance. Você e seus convidados só aproveitam a festa!</p>
+                    </div>
+                </div>
+
+                <div class="text-center margin-top-lg">
+                    <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20iniciar%20meu%20atendimento%20para%20reservar%20uma%20atra%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+                        <i class="bi bi-whatsapp"></i> Iniciar Contratação Agora
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. SEÇÃO CORPORATIVA -->
+        <section class="section corporate" id="corporativo">
+            <div class="container">
+                <div class="corporate__box">
+                    <div class="corporate__content">
+                        <span class="section-tag">Soluções para Empresas</span>
+                        <h2 class="corporate__title">Sua marca também pode fazer <span class="text-highlight">parte da experiência</span></h2>
+                        <p class="corporate__text">
+                            Leve robôs de LED, personagens e performances interativas para eventos corporativos, feiras de negócios, ativações de ponto de venda, inaugurações de lojas e convenções empresariais. Atraia atenção imediata e gere alto compartilhamento espontâneo nas redes sociais.
+                        </p>
+
+                        <div class="corporate__features">
+                            <div class="corp-feature">
+                                <i class="bi bi-check-circle-fill text-pink"></i>
+                                <span>Ativações de Marca &amp; Feiras de Negócios</span>
+                            </div>
+                            <div class="corp-feature">
+                                <i class="bi bi-check-circle-fill text-pink"></i>
+                                <span>Inaugurações de Lojas &amp; Shoppings</span>
+                            </div>
+                            <div class="corp-feature">
+                                <i class="bi bi-check-circle-fill text-pink"></i>
+                                <span>Festas de Confraternização &amp; Premiações</span>
+                            </div>
+                            <div class="corp-feature">
+                                <i class="bi bi-check-circle-fill text-pink"></i>
+                                <span>Ações Promocionais com Fotos do Público</span>
+                            </div>
+                        </div>
+
+                        <div class="corporate__actions">
+                            <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20experi%C3%AAncia%20para%20evento%20corporativo%20ou%20a%C3%A7%C3%A3o%20de%20marca." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+                                <i class="bi bi-building"></i>
+                                <span>QUERO UMA EXPERIÊNCIA PARA MINHA EMPRESA</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="corporate__media">
+                        <img src="imagens/robo2.jpg" alt="Ação corporativa e ativação com Robô de LED" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. SEÇÃO — ÁREA DE ATENDIMENTO & COMPROMISSO -->
+        <section class="section coverage" id="cobertura">
+            <div class="container">
+                <div class="coverage__wrapper">
+                    <div class="coverage__info">
+                        <span class="section-tag">Onde Atendemos</span>
+                        <h2 class="section-title">Levamos a experiência até o <span class="text-highlight">seu evento</span></h2>
+                        <p class="coverage__text">
+                            Estrutura móvel completa com transporte dedicado e equipe de suporte para atender eventos em todo o estado de São Paulo:
+                        </p>
+                        <div class="coverage__locations">
+                            <div class="loc-badge"><i class="bi bi-geo-alt-fill"></i> Região do Grande ABC</div>
+                            <div class="loc-badge"><i class="bi bi-geo-alt-fill"></i> São Paulo (Capital)</div>
+                            <div class="loc-badge"><i class="bi bi-geo-alt-fill"></i> Litoral Paulista</div>
+                            <div class="loc-badge"><i class="bi bi-geo-alt-fill"></i> Interior de São Paulo</div>
+                        </div>
+                    </div>
+                    <div class="coverage__card">
+                        <div class="coverage__card-icon"><i class="bi bi-calendar2-check-fill"></i></div>
+                        <h3>Garanta a data da sua festa</h3>
+                        <p>Datas de finais de semana e feriados possuem alta procura. Consulte a disponibilidade da sua data com antecedência.</p>
+                        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20se%20minha%20data%20est%C3%A1%20dispon%C3%ADvel." target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--full">
+                            <i class="bi bi-whatsapp"></i> Checar data disponível
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. CTA FINAL DE CONVERSÃO -->
+        <section class="section final-cta" id="orcamento">
+            <div class="final-cta__glow"></div>
+            <div class="container">
+                <div class="final-cta__box text-center">
+                    <span class="section-tag">Não Deixe Para Depois</span>
+                    <h2 class="final-cta__title">Pronto para transformar <span class="text-highlight">seu evento?</span></h2>
+                    <p class="final-cta__text">
+                        Conte para a gente o que você está planejando e descubra a experiência ideal para surpreender seus convidados.
+                    </p>
+                    <div class="final-cta__actions">
+                        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--xl">
+                            <i class="bi bi-whatsapp"></i>
+                            <span>SOLICITAR ORÇAMENTO PELO WHATSAPP</span>
+                        </a>
+                    </div>
+                    <div class="final-cta__badges">
+                        <span><i class="bi bi-check2"></i> Resposta Rápida</span>
+                        <span><i class="bi bi-check2"></i> Proposta sem Compromisso</span>
+                        <span><i class="bi bi-check2"></i> Condições Especiais</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer__grid">
+                <!-- Coluna 1: Sobre & Marca -->
+                <div class="footer__col footer__col--brand">
+                    <img src="imagens/logo.png" alt="Robo LED Partner" class="footer__logo">
+                    <p class="footer__bio">
+                        Empresa pioneira em entretenimento, robôs de LED, personagens vivos e experiências inesquecíveis para eventos sociais e corporativos.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.instagram.com/roboledpartner/" target="_blank" rel="noopener noreferrer" aria-label="Siga-nos no Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5511919973647" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Navegação -->
+                <div class="footer__col">
+                    <h4 class="footer__heading">Navegação</h4>
+                    <ul class="footer__links">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#experiencias">Nossas Experiências</a></li>
+                        <li><a href="#personagens">Catálogo de Personagens</a></li>
+                        <li><a href="#eventos">Tipos de Eventos</a></li>
+                        <li><a href="#galeria">Galeria Real</a></li>
+                        <li><a href="#corporativo">Seção Corporativa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Atrações -->
+                <div class="footer__col">
+                    <h4 class="footer__heading">Atrações Principais</h4>
+                    <ul class="footer__links">
+                        <li><a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Rob%C3%B4%20Nextrom." target="_blank" rel="noopener noreferrer">Robô de LED Nextrom</a></li>
+                        <li><a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Rob%C3%B4%20Tequileiro." target="_blank" rel="noopener noreferrer">Robô Tequileiro</a></li>
+                        <li><a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Homem-Aranha." target="_blank" rel="noopener noreferrer">Homem-Aranha</a></li>
+                        <li><a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Sonic." target="_blank" rel="noopener noreferrer">Sonic</a></li>
+                        <li><a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20Personagens%20Disney." target="_blank" rel="noopener noreferrer">Mickey &amp; Minnie</a></li>
+                        <li><a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Patrulha%20Canina." target="_blank" rel="noopener noreferrer">Patrulha Canina</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contatos Oficiais -->
+                <div class="footer__col">
+                    <h4 class="footer__heading">Contato Oficial</h4>
+                    <ul class="footer__contact-list">
+                        <li>
+                            <i class="bi bi-whatsapp text-pink"></i>
+                            <a href="https://wa.me/5511919973647" target="_blank" rel="noopener noreferrer">(11) 91997-3647</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope text-pink"></i>
+                            <a href="mailto:roboledpartner@gmail.com">roboledpartner@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-instagram text-pink"></i>
+                            <a href="https://www.instagram.com/roboledpartner/" target="_blank" rel="noopener noreferrer">@roboledpartner</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt text-pink"></i>
+                            <span>São Paulo, Grande ABC, Litoral e Interior SP</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 Robo LED Partner. Todos os direitos reservados. Experiências e Entretenimento para Eventos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <aside class="floating-whatsapp" aria-label="Contato direto pelo WhatsApp">
+        <a href="https://wa.me/5511919973647?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20evento." target="_blank" rel="noopener noreferrer" class="floating-whatsapp__btn" aria-label="Abrir conversa no WhatsApp">
+            <span class="floating-whatsapp__ping"></span>
+            <i class="bi bi-whatsapp"></i>
+            <span class="floating-whatsapp__tooltip">Fale Conosco no WhatsApp</span>
+        </a>
+    </aside>
+
+    <!-- Modal Lightbox da Galeria -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de Imagem">
+        <div class="lightbox__overlay" id="lightbox-overlay"></div>
+        <div class="lightbox__container">
+            <button class="lightbox__close" id="lightbox-close" aria-label="Fechar visualizador">&times;</button>
+            <img src="" alt="" class="lightbox__image" id="lightbox-img">
+            <p class="lightbox__caption" id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript Principal -->
+    <script src="menu.js"></script>
+</body>
 </html>
