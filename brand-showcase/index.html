@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robo LED Partner — Brand Identity & Logo Showcase</title>
+  <!-- Google Fonts: Syne, Outfit, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0B0B10;
+      --bg-card: #12121A;
+      --bg-card-hover: #181824;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(168, 17, 231, 0.5);
+      
+      --c-purple: #A811E7;
+      --c-magenta: #FF007A;
+      --c-cyan: #00F0FF;
+      --c-green: #00FF88;
+      --c-white: #FFFFFF;
+      --c-gray-100: #E4E4EC;
+      --c-gray-400: #8E8EA0;
+      --c-gray-700: #2D2D3D;
+      
+      --accent-glow: rgba(168, 17, 231, 0.35);
+      --font-display: 'Syne', sans-serif;
+      --font-brand: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Light Theme Modifier */
+    body.light-theme {
+      --bg-main: #F4F4F8;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #F9F9FC;
+      --border-color: rgba(0, 0, 0, 0.08);
+      --border-focus: rgba(168, 17, 231, 0.4);
+      --c-white: #0B0B10;
+      --c-gray-100: #1D1D26;
+      --c-gray-400: #626274;
+      --c-gray-700: #E2E2EA;
+      --accent-glow: rgba(168, 17, 231, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--c-gray-100);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    /* Top glowing ambient */
+    .ambient-glow {
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(168, 17, 231, 0.2) 0%, rgba(255, 0, 122, 0.08) 40%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 11, 16, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    body.light-theme header {
+      background: rgba(244, 244, 248, 0.88);
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-brand);
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .header-logo .badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--c-purple), var(--c-magenta));
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--c-gray-100);
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .btn-toggle:hover {
+      border-color: var(--c-purple);
+      transform: translateY(-1px);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px 24px 100px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 56px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(168, 17, 231, 0.12);
+      border: 1px solid rgba(168, 17, 231, 0.3);
+      border-radius: var(--radius-full);
+      color: #df5eff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hero h1 {
+      font-family: var(--font-brand);
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #FFFFFF 30%, #E0A0FF 80%, #FF007A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    body.light-theme .hero h1 {
+      background: linear-gradient(135deg, #0B0B10 30%, #5E008A 80%, #FF007A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--c-gray-400);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Customizer Bar */
+    .customizer-bar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 20px 28px;
+      margin-bottom: 48px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .customizer-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .customizer-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--c-gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .color-picker-btns {
+      display: flex;
+      gap: 8px;
+    }
+
+    .color-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .color-dot.active {
+      border-color: #ffffff;
+      transform: scale(1.15);
+      box-shadow: 0 0 12px currentColor;
+    }
+
+    .tagline-select {
+      background: var(--bg-main);
+      color: var(--c-gray-100);
+      border: 1px solid var(--border-color);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Section Headings */
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 24px;
+    }
+
+    .section-title h2 {
+      font-family: var(--font-brand);
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title p {
+      color: var(--c-gray-400);
+      font-size: 0.95rem;
+    }
+
+    /* Grid of Logo Concepts */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 28px;
+      margin-bottom: 64px;
+    }
+
+    .logo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px 24px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .logo-card:hover {
+      border-color: var(--border-focus);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.3);
+    }
+
+    .logo-card.featured {
+      border-color: var(--c-purple);
+      box-shadow: 0 0 30px rgba(168, 17, 231, 0.2);
+    }
+
+    .logo-card-tag {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--c-gray-100);
+    }
+
+    .logo-card.featured .logo-card-tag {
+      background: linear-gradient(135deg, var(--c-purple), var(--c-magenta));
+      color: #fff;
+    }
+
+    .logo-canvas {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: var(--radius-md);
+      margin-bottom: 24px;
+      position: relative;
+      padding: 20px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    body.light-theme .logo-canvas {
+      background: #EAEAEF;
+    }
+
+    .logo-canvas svg {
+      max-width: 100%;
+      max-height: 140px;
+      transition: var(--transition);
+    }
+
+    .logo-info h3 {
+      font-family: var(--font-brand);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .logo-info p {
+      font-size: 0.9rem;
+      color: var(--c-gray-400);
+      margin-bottom: 20px;
+      min-height: 52px;
+    }
+
+    .logo-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .btn-action {
+      flex: 1;
+      padding: 10px;
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--c-gray-100);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-action:hover {
+      background: var(--c-purple);
+      color: #fff;
+      border-color: var(--c-purple);
+    }
+
+    /* Comparison Section */
+    .comparison-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 64px;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    .comp-box {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .comp-box.is-new {
+      border-color: var(--c-purple);
+      position: relative;
+    }
+
+    .comp-badge {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+    }
+
+    .comp-box.is-old .comp-badge {
+      background: #ff4757;
+      color: #fff;
+    }
+
+    .comp-box.is-new .comp-badge {
+      background: var(--c-green);
+      color: #0B0B10;
+    }
+
+    .comp-preview {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      width: 100%;
+    }
+
+    .comp-preview img {
+      max-height: 90px;
+      max-width: 90%;
+      object-fit: contain;
+    }
+
+    .comp-list {
+      list-style: none;
+      text-align: left;
+      font-size: 0.88rem;
+      color: var(--c-gray-400);
+      width: 100%;
+    }
+
+    .comp-list li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .comp-list li strong {
+      color: var(--c-gray-100);
+    }
+
+    /* Mockups Grid */
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+      margin-bottom: 64px;
+    }
+
+    .mockup-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mockup-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-color);
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mockup-body {
+      padding: 28px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 260px;
+      background: #07070A;
+      position: relative;
+    }
+
+    /* Mockup 1: Instagram Avatar */
+    .insta-avatar-mockup {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .insta-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #0B0B10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    /* Mockup 2: Staff Uniform Hoodie */
+    .hoodie-mockup {
+      width: 240px;
+      height: 220px;
+      background: #141419;
+      border-radius: 20px 20px 8px 8px;
+      border: 1px solid #282834;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 36px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+    }
+
+    .hoodie-collar {
+      position: absolute;
+      top: -10px;
+      width: 70px;
+      height: 24px;
+      background: #0B0B10;
+      border-radius: 50%;
+      border: 2px solid #282834;
+    }
+
+    .hoodie-chest-logo {
+      transform: scale(0.7);
+    }
+
+    /* Mockup 3: VIP Pass */
+    .badge-mockup {
+      width: 180px;
+      height: 260px;
+      background: linear-gradient(145deg, #181824, #0E0E14);
+      border: 1px solid rgba(168, 17, 231, 0.4);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.7), 0 0 20px rgba(168, 17, 231, 0.2);
+    }
+
+    .badge-hole {
+      width: 36px;
+      height: 8px;
+      background: #07070A;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .badge-tag {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: #00FF88;
+      background: rgba(0, 255, 136, 0.15);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .badge-qr {
+      width: 44px;
+      height: 44px;
+      background: #fff;
+      border-radius: 4px;
+      padding: 3px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .badge-qr div { background: #000; border-radius: 1px; }
+
+    /* Mockup 4: Commercial Proposal Header */
+    .proposal-mockup {
+      width: 100%;
+      max-width: 320px;
+      background: #FFFFFF;
+      border-radius: 8px;
+      padding: 16px;
+      color: #111;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+
+    .proposal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #EAEAEA;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+    }
+
+    .proposal-lines {
+      height: 6px;
+      background: #ECECF2;
+      border-radius: 3px;
+      margin-bottom: 8px;
+    }
+
+    /* Color Palette Swatches */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 64px;
+    }
+
+    .palette-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .palette-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-focus);
+    }
+
+    .palette-color {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 8px;
+    }
+
+    .palette-copy-btn {
+      font-size: 0.7rem;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .palette-info {
+      padding: 12px;
+    }
+
+    .palette-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 2px;
+    }
+
+    .palette-hex {
+      font-family: monospace;
+      font-size: 0.8rem;
+      color: var(--c-gray-400);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--c-purple);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .customizer-bar { flex-direction: column; align-items: flex-start; }
+      header { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-logo">
+      <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
+        <path d="M50 8L82 26V58L50 92L18 58V26L50 8Z" fill="url(#h-grad)" stroke="#A811E7" stroke-width="4"/>
+        <path d="M36 42L50 56L64 42" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="h-grad" x1="18" y1="8" x2="82" y2="92" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A811E7"/>
+            <stop offset="1" stop-color="#FF007A"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span>ROBO LED</span>
+      <span class="badge">Brand System</span>
+    </div>
+    <div class="header-controls">
+      <button class="btn-toggle" id="themeToggle">
+        <span id="themeIcon">☀️</span>
+        <span id="themeText">Modo Claro</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-tag">⚡ Estratégia de Identidade Visual</div>
+      <h1>Evolução da Marca Robo LED Partner</h1>
+      <p>Transformando a marca no maior símbolo de entretenimento, shows de tecnologia e personagens vivos para eventos.</p>
+    </div>
+
+    <!-- Customizer Toolbar -->
+    <div class="customizer-bar">
+      <div class="customizer-group">
+        <span class="customizer-label">Cor do LED:</span>
+        <div class="color-picker-btns">
+          <div class="color-dot active" style="background: #A811E7; color: #A811E7;" data-color="purple" title="Electric Purple & Magenta"></div>
+          <div class="color-dot" style="background: #00F0FF; color: #00F0FF;" data-color="cyan" title="Laser Cyan"></div>
+          <div class="color-dot" style="background: #00FF88; color: #00FF88;" data-color="green" title="Neon Matrix Green"></div>
+          <div class="color-dot" style="background: #FFB800; color: #FFB800;" data-color="gold" title="Solar Gold"></div>
+          <div class="color-dot" style="background: #FFFFFF; color: #FFFFFF;" data-color="white" title="Monochrome White"></div>
+        </div>
+      </div>
+
+      <div class="customizer-group">
+        <span class="customizer-label">Assinatura / Slogan:</span>
+        <select class="tagline-select" id="taglineSelector">
+          <option value="PARTNER">ROBO LED PARTNER (Oficial)</option>
+          <option value="ENTERTAINMENT & CHARACTERS">ROBO LED | Entertainment & Characters</option>
+          <option value="SHOWS & EXPERIÊNCIAS">ROBO LED | Shows & Experiências</option>
+          <option value="ATRAÇÕES PARA EVENTOS">ROBO LED | Atrações para Eventos</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Section: Logo Variations -->
+    <div class="section-title">
+      <div>
+        <h2>🎯 Variações de Logos & Conceitos</h2>
+        <p>Desenvolvidas para preservar a força do robô e expandir o portfólio de atrações</p>
+      </div>
+    </div>
+
+    <div class="logo-grid">
+
+      <!-- CONCEPT 2A: O Robô-Show Principal (RECOMENDADO) -->
+      <div class="logo-card featured">
+        <div class="logo-card-tag">⭐ Recomendado para o Mercado</div>
+        <div class="logo-canvas" id="canvas-c2a">
+          <!-- SVG Concept 2A: Hero Stage Robot -->
+          <svg class="brand-svg" width="340" height="90" viewBox="0 0 420 110" fill="none">
+            <!-- Símbolo Hero Robot -->
+            <g transform="translate(10, 5)">
+              <path d="M50 6 L88 24 L82 62 L50 96 L18 62 L12 24 Z" fill="#12121A" stroke="url(#c2-neon-glow)" stroke-width="4" stroke-linejoin="round"/>
+              <polygon points="50,14 58,26 42,26" fill="url(#c2-neon-glow)"/>
+              <path d="M22 34 L32 38 L28 54 L18 50 Z" fill="url(#c2-neon-glow)"/>
+              <path d="M78 34 L68 38 L72 54 L82 50 Z" fill="url(#c2-neon-glow)"/>
+              <polygon points="34,42 66,42 50,66" fill="#FFFFFF"/>
+              <polygon points="37,44 63,44 50,62" fill="url(#c2-neon-glow)"/>
+              <polygon points="40,74 60,74 50,86" fill="url(#c2-neon-glow)"/>
+            </g>
+
+            <!-- Tipografia ROBO LED -->
+            <g transform="translate(120, 20)">
+              <text x="0" y="38" font-family="'Outfit', sans-serif" font-weight="900" font-size="38" fill="var(--c-white)" letter-spacing="-1">ROBO</text>
+              <text x="114" y="38" font-family="'Outfit', sans-serif" font-weight="900" font-size="38" fill="url(#c2-neon-glow)" letter-spacing="1">LED</text>
+              <text class="tagline-text" x="2" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="var(--c-gray-400)" letter-spacing="6">PARTNER</text>
+            </g>
+
+            <defs>
+              <linearGradient id="c2-neon-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#A811E7" class="grad-start"/>
+                <stop offset="100%" stop-color="#FF007A" class="grad-end"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-info">
+          <h3>Conceito 2A: O Robô-Show Hero</h3>
+          <p>Visor em V marcante com feixes de iluminação de palco. Símbolo forte, harmonioso e com presença de entretenimento.</p>
+        </div>
+        <div class="logo-actions">
+          <button class="btn-action" onclick="copySvgCode('canvas-c2a')">📋 Copiar SVG</button>
+          <button class="btn-action" onclick="downloadSvg('canvas-c2a', 'roboled-hero-concept')">⬇️ Baixar</button>
+        </div>
+      </div>
+
+      <!-- CONCEPT 2B: Cyber Shield & Stage Badge -->
+      <div class="logo-card">
+        <div class="logo-card-tag">Selo / Emblema</div>
+        <div class="logo-canvas" id="canvas-c2b">
+          <!-- SVG Concept 2B -->
+          <svg class="brand-svg" width="340" height="90" viewBox="0 0 420 110" fill="none">
+            <g transform="translate(10, 5)">
+              <polygon points="50,4 90,26 90,74 50,96 10,74 10,26" fill="rgba(168, 17, 231, 0.12)" stroke="url(#c2-neon-glow)" stroke-width="3.5"/>
+              <path d="M30 32 L50 20 L70 32 L66 58 L50 78 L34 58 Z" fill="#12121A" stroke="var(--c-white)" stroke-width="2.5"/>
+              <polygon points="38,40 62,40 50,56" fill="url(#c2-neon-glow)"/>
+              <line x1="24" y1="50" x2="12" y2="50" stroke="url(#c2-neon-glow)" stroke-width="3" stroke-linecap="round"/>
+              <line x1="76" y1="50" x2="88" y2="50" stroke="url(#c2-neon-glow)" stroke-width="3" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(120, 20)">
+              <text x="0" y="38" font-family="'Syne', sans-serif" font-weight="800" font-size="34" fill="var(--c-white)" letter-spacing="1">ROBO LED</text>
+              <text class="tagline-text" x="2" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="var(--c-gray-400)" letter-spacing="6">PARTNER</text>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-info">
+          <h3>Conceito 2B: Cyber Shield Badge</h3>
+          <p>O robô inserido em um brasão tecnológico. Perfeito para uniformes, crachás VIP e adesivagem de equipamentos pesados.</p>
+        </div>
+        <div class="logo-actions">
+          <button class="btn-action" onclick="copySvgCode('canvas-c2b')">📋 Copiar SVG</button>
+          <button class="btn-action" onclick="downloadSvg('canvas-c2b', 'roboled-shield-concept')">⬇️ Baixar</button>
+        </div>
+      </div>
+
+      <!-- CONCEPT 1: Redesign Conservador Polido -->
+      <div class="logo-card">
+        <div class="logo-card-tag">Polimento Direto</div>
+        <div class="logo-canvas" id="canvas-c1">
+          <!-- SVG Concept 1 -->
+          <svg class="brand-svg" width="340" height="90" viewBox="0 0 420 110" fill="none">
+            <g transform="translate(10, 5)">
+              <path d="M50 10 L76 22 L72 56 L50 86 L28 56 L24 22 Z" fill="#12121A" stroke="url(#c2-neon-glow)" stroke-width="4"/>
+              <polygon points="36,36 64,36 50,56" fill="url(#c2-neon-glow)"/>
+              <path d="M32 70 L50 80 L68 70 L62 90 L50 94 L38 90 Z" fill="url(#c2-neon-glow)"/>
+            </g>
+            <g transform="translate(120, 22)">
+              <text x="0" y="36" font-family="'Outfit', sans-serif" font-weight="800" font-size="36" fill="var(--c-white)">Robo<tspan fill="url(#c2-neon-glow)">Led</tspan></text>
+              <text class="tagline-text" x="2" y="64" font-family="'Outfit', sans-serif" font-weight="700" font-size="22" fill="var(--c-gray-100)" letter-spacing="1">Partner</text>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-info">
+          <h3>Conceito 1: Redesign Conservador</h3>
+          <p>Evolução direta da logo atual sem o robozinho infantil redundante e com geometria vetorial de precisão.</p>
+        </div>
+        <div class="logo-actions">
+          <button class="btn-action" onclick="copySvgCode('canvas-c1')">📋 Copiar SVG</button>
+          <button class="btn-action" onclick="downloadSvg('canvas-c1', 'roboled-conservative-concept')">⬇️ Baixar</button>
+        </div>
+      </div>
+
+      <!-- CONCEPT 3: Prismatic Energy Monogram -->
+      <div class="logo-card">
+        <div class="logo-card-tag">Minimalista & Luz</div>
+        <div class="logo-canvas" id="canvas-c3">
+          <!-- SVG Concept 3 -->
+          <svg class="brand-svg" width="340" height="90" viewBox="0 0 420 110" fill="none">
+            <g transform="translate(10, 8)">
+              <path d="M25 20 L65 20 C78 20 85 28 85 40 C85 52 78 60 65 60 L45 60 L75 90" stroke="url(#c2-neon-glow)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="25" y1="20" x2="25" y2="90" stroke="var(--c-white)" stroke-width="8" stroke-linecap="round"/>
+              <circle cx="52" cy="40" r="5" fill="#FFFFFF"/>
+            </g>
+            <g transform="translate(120, 20)">
+              <text x="0" y="38" font-family="'Syne', sans-serif" font-weight="800" font-size="34" fill="var(--c-white)" letter-spacing="2">ROBO LED</text>
+              <text class="tagline-text" x="2" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="13" fill="var(--c-gray-400)" letter-spacing="5">EXPERIENCES</text>
+            </g>
+          </svg>
+        </div>
+        <div class="logo-info">
+          <h3>Conceito 3: Prisma 'R' Tech</h3>
+          <p>Fusão minimalista da silhueta robótica com o monograma 'R' e feixes cênicos. Ideal para grandes marcas corporativas.</p>
+        </div>
+        <div class="logo-actions">
+          <button class="btn-action" onclick="copySvgCode('canvas-c3')">📋 Copiar SVG</button>
+          <button class="btn-action" onclick="downloadSvg('canvas-c3', 'roboled-monogram-concept')">⬇️ Baixar</button>
+        </div>
+      </div>
+
+      <!-- ICON ONLY: Avatar / Social Media -->
+      <div class="logo-card">
+        <div class="logo-card-tag">Ícone / Favicon / App</div>
+        <div class="logo-canvas" id="canvas-icon">
+          <!-- Símbolo Isolado 100x100 -->
+          <svg class="brand-svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
+            <path d="M50 6 L88 24 L82 62 L50 96 L18 62 L12 24 Z" fill="#12121A" stroke="url(#c2-neon-glow)" stroke-width="4" stroke-linejoin="round"/>
+            <polygon points="50,14 58,26 42,26" fill="url(#c2-neon-glow)"/>
+            <path d="M22 34 L32 38 L28 54 L18 50 Z" fill="url(#c2-neon-glow)"/>
+            <path d="M78 34 L68 38 L72 54 L82 50 Z" fill="url(#c2-neon-glow)"/>
+            <polygon points="34,42 66,42 50,66" fill="#FFFFFF"/>
+            <polygon points="37,44 63,44 50,62" fill="url(#c2-neon-glow)"/>
+            <polygon points="40,74 60,74 50,86" fill="url(#c2-neon-glow)"/>
+          </svg>
+        </div>
+        <div class="logo-info">
+          <h3>Símbolo Hero Isolado</h3>
+          <p>Otimizado para avatares circulares de Instagram, WhatsApp, favicons e bordados em uniformes.</p>
+        </div>
+        <div class="logo-actions">
+          <button class="btn-action" onclick="copySvgCode('canvas-icon')">📋 Copiar SVG</button>
+          <button class="btn-action" onclick="downloadSvg('canvas-icon', 'roboled-hero-icon')">⬇️ Baixar</button>
+        </div>
+      </div>
+
+      <!-- VERTICAL / STACKED -->
+      <div class="logo-card">
+        <div class="logo-card-tag">Assinatura Vertical</div>
+        <div class="logo-canvas" id="canvas-vert">
+          <!-- Símbolo Vertical Stacked -->
+          <svg class="brand-svg" width="160" height="130" viewBox="0 0 200 160" fill="none">
+            <g transform="translate(50, 0)">
+              <path d="M50 6 L88 24 L82 62 L50 96 L18 62 L12 24 Z" fill="#12121A" stroke="url(#c2-neon-glow)" stroke-width="4"/>
+              <polygon points="34,42 66,42 50,66" fill="url(#c2-neon-glow)"/>
+            </g>
+            <text x="100" y="125" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="900" font-size="22" fill="var(--c-white)" letter-spacing="1">ROBO <tspan fill="url(#c2-neon-glow)">LED</tspan></text>
+            <text class="tagline-text" x="100" y="145" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" fill="var(--c-gray-400)" letter-spacing="5">PARTNER</text>
+          </svg>
+        </div>
+        <div class="logo-info">
+          <h3>Assinatura Vertical / Stacked</h3>
+          <p>Para cartões de visita verticais, totens de entrada de eventos, stories e embalagens.</p>
+        </div>
+        <div class="logo-actions">
+          <button class="btn-action" onclick="copySvgCode('canvas-vert')">📋 Copiar SVG</button>
+          <button class="btn-action" onclick="downloadSvg('canvas-vert', 'roboled-vertical-logo')">⬇️ Baixar</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Section: Comparison Before & After -->
+    <div class="comparison-section">
+      <div class="section-title" style="margin-bottom: 12px;">
+        <h2>⚖️ Comparativo Direto: Antes vs. Nova Identidade</h2>
+      </div>
+      <p style="color: var(--c-gray-400); font-size: 0.95rem;">Veja como a nova proposta preserva a força do robô eliminando ruídos visuais e ampliando o posicionamento.</p>
+
+      <div class="comparison-grid">
+        <!-- Before -->
+        <div class="comp-box is-old">
+          <div class="comp-badge">Logo Anterior</div>
+          <div class="comp-preview">
+            <img src="./current_logo.png" alt="Logo Anterior">
+          </div>
+          <ul class="comp-list">
+            <li>❌ <strong>Duplo Robô conflitante:</strong> Capacete cyberpunk na esquerda + robozinho cartoon infantil na direita.</li>
+            <li>❌ <strong>"Roboled" junto:</strong> Perde a força da sigla LED e tecnologia.</li>
+            <li>❌ <strong>Ruído na base:</strong> Elementos pixelados perdem nitidez em tamanhos pequenos.</li>
+            <li>❌ <strong>Posicionamento restrito:</strong> Passa a impressão de alugar apenas armaduras.</li>
+          </ul>
+        </div>
+
+        <!-- After -->
+        <div class="comp-box is-new">
+          <div class="comp-badge">Nova Identidade (Conceito 2)</div>
+          <div class="comp-preview">
+            <!-- Mini Hero Logo -->
+            <svg width="240" height="60" viewBox="0 0 380 90" fill="none">
+              <g transform="translate(10, 0)">
+                <path d="M40 5 L70 20 L65 52 L40 80 L15 52 L10 20 Z" fill="#12121A" stroke="#A811E7" stroke-width="3.5"/>
+                <polygon points="27,34 53,34 40,54" fill="#FF007A"/>
+              </g>
+              <text x="100" y="42" font-family="'Outfit', sans-serif" font-weight="900" font-size="30" fill="#FFFFFF">ROBO <tspan fill="#FF007A">LED</tspan></text>
+              <text x="102" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#A811E7" letter-spacing="4">PARTNER</text>
+            </svg>
+          </div>
+          <ul class="comp-list">
+            <li>✅ <strong>Robô Único e Protagonista:</strong> Geometria limpa, imponente e com presença de palco.</li>
+            <li>✅ <strong>Hierarquia Perfeita:</strong> ROBO LED em destaque com PARTNER elegante.</li>
+            <li>✅ <strong>Vetorização Ultra-Nítida:</strong> Funciona do favicon de 16px ao telão de 10 metros.</li>
+            <li>✅ <strong>Posicionamento de Entretenimento:</strong> Vende Robôs, Personagens Vivos, Shows e Eventos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Real-Life Mockups -->
+    <div class="section-title">
+      <div>
+        <h2>👕 Aplicações Reais nos Eventos</h2>
+        <p>A logo funcionando em múltiplos pontos de contato da empresa</p>
+      </div>
+    </div>
+
+    <div class="mockup-grid">
+
+      <!-- Mockup 1: Instagram Avatar -->
+      <div class="mockup-card">
+        <div class="mockup-header">📱 Foto de Perfil (Instagram / WhatsApp)</div>
+        <div class="mockup-body">
+          <div class="insta-avatar-mockup">
+            <div class="insta-inner">
+              <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
+                <path d="M50 6 L88 24 L82 62 L50 96 L18 62 L12 24 Z" fill="#12121A" stroke="#A811E7" stroke-width="4.5"/>
+                <polygon points="34,42 66,42 50,66" fill="#FF007A"/>
+                <polygon points="40,74 60,74 50,86" fill="#A811E7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mockup 2: Staff Hoodie / Uniform -->
+      <div class="mockup-card">
+        <div class="mockup-header">🧥 Uniforme / Hoodie Staff de Produção</div>
+        <div class="mockup-body">
+          <div class="hoodie-mockup">
+            <div class="hoodie-collar"></div>
+            <div class="hoodie-chest-logo">
+              <svg width="180" height="50" viewBox="0 0 380 90" fill="none">
+                <g transform="translate(10, 0)">
+                  <path d="M40 5 L70 20 L65 52 L40 80 L15 52 L10 20 Z" fill="#0B0B10" stroke="#FF007A" stroke-width="4"/>
+                  <polygon points="27,34 53,34 40,54" fill="#A811E7"/>
+                </g>
+                <text x="95" y="44" font-family="'Outfit', sans-serif" font-weight="900" font-size="32" fill="#FFFFFF">ROBO <tspan fill="#FF007A">LED</tspan></text>
+                <text x="97" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#8E8EA0" letter-spacing="5">CREW / STAFF</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mockup 3: VIP Pass -->
+      <div class="mockup-card">
+        <div class="mockup-header">🎫 Crachá VIP / Acesso a Bastidores</div>
+        <div class="mockup-body">
+          <div class="badge-mockup">
+            <div class="badge-hole"></div>
+            <div class="badge-tag">ALL ACCESS VIP</div>
+            <svg width="90" height="70" viewBox="0 0 100 80" fill="none">
+              <path d="M50 4 L82 20 L76 52 L50 78 L24 52 L18 20 Z" fill="#12121A" stroke="#A811E7" stroke-width="3"/>
+              <polygon points="36,34 64,34 50,52" fill="#FF007A"/>
+            </svg>
+            <div style="font-family:'Outfit',sans-serif;font-weight:800;font-size:0.9rem;text-align:center;color:#fff;">ROBO LED<br><span style="font-size:0.65rem;color:#00F0FF;letter-spacing:2px;">PRODUCTION</span></div>
+            <div class="badge-qr">
+              <div></div><div></div><div></div><div></div>
+              <div></div><div></div><div></div><div></div>
+              <div></div><div></div><div></div><div></div>
+              <div></div><div></div><div></div><div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mockup 4: Commercial Proposal (Light Mode) -->
+      <div class="mockup-card">
+        <div class="mockup-header">📄 Orçamento / Proposta Comercial (A4)</div>
+        <div class="mockup-body" style="background: #E4E4EB;">
+          <div class="proposal-mockup">
+            <div class="proposal-header">
+              <svg width="150" height="34" viewBox="0 0 380 90" fill="none">
+                <g transform="translate(10, 0)">
+                  <path d="M40 5 L70 20 L65 52 L40 80 L15 52 L10 20 Z" fill="#F4F4F8" stroke="#A811E7" stroke-width="4"/>
+                  <polygon points="27,34 53,34 40,54" fill="#FF007A"/>
+                </g>
+                <text x="95" y="44" font-family="'Outfit', sans-serif" font-weight="900" font-size="34" fill="#0B0B10">ROBO <tspan fill="#A811E7">LED</tspan></text>
+                <text x="97" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#626274" letter-spacing="4">PARTNER</text>
+              </svg>
+              <div style="font-size: 0.65rem; font-weight: 800; color: #A811E7;">PROPOSTA #2026</div>
+            </div>
+            <div class="proposal-lines" style="width: 80%;"></div>
+            <div class="proposal-lines" style="width: 100%;"></div>
+            <div class="proposal-lines" style="width: 60%;"></div>
+            <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #111;">Show Robô LED + 2 Personagens</span>
+              <span style="font-size: 0.8rem; font-weight: 800; color: #A811E7;">Confirmado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Section: Color System -->
+    <div class="section-title">
+      <div>
+        <h2>🎨 Paleta Cromática Oficial</h2>
+        <p>Clique em qualquer cor para copiar o código HEX diretamente</p>
+      </div>
+    </div>
+
+    <div class="palette-grid">
+      <div class="palette-card" onclick="copyHex('#A811E7', 'Electric Purple')">
+        <div class="palette-color" style="background: #A811E7;"><span class="palette-copy-btn">Copiar</span></div>
+        <div class="palette-info">
+          <div class="palette-name">Electric Purple</div>
+          <div class="palette-hex">#A811E7</div>
+        </div>
+      </div>
+
+      <div class="palette-card" onclick="copyHex('#FF007A', 'Cyber Magenta')">
+        <div class="palette-color" style="background: #FF007A;"><span class="palette-copy-btn">Copiar</span></div>
+        <div class="palette-info">
+          <div class="palette-name">Cyber Magenta</div>
+          <div class="palette-hex">#FF007A</div>
+        </div>
+      </div>
+
+      <div class="palette-card" onclick="copyHex('#0B0B10', 'Deep Obsidian')">
+        <div class="palette-color" style="background: #0B0B10;"><span class="palette-copy-btn">Copiar</span></div>
+        <div class="palette-info">
+          <div class="palette-name">Deep Obsidian</div>
+          <div class="palette-hex">#0B0B10</div>
+        </div>
+      </div>
+
+      <div class="palette-card" onclick="copyHex('#00F0FF', 'Laser Cyan')">
+        <div class="palette-color" style="background: #00F0FF;"><span class="palette-copy-btn" style="color:#000;">Copiar</span></div>
+        <div class="palette-info">
+          <div class="palette-name">Laser Cyan</div>
+          <div class="palette-hex">#00F0FF</div>
+        </div>
+      </div>
+
+      <div class="palette-card" onclick="copyHex('#00FF88', 'Neon Energy CTA')">
+        <div class="palette-color" style="background: #00FF88;"><span class="palette-copy-btn" style="color:#000;">Copiar</span></div>
+        <div class="palette-info">
+          <div class="palette-name">Neon Energy (CTA)</div>
+          <div class="palette-hex">#00FF88</div>
+        </div>
+      </div>
+
+      <div class="palette-card" onclick="copyHex('#FFFFFF', 'Pure White')">
+        <div class="palette-color" style="background: #FFFFFF; border-bottom: 1px solid #ddd;"><span class="palette-copy-btn" style="color:#000;">Copiar</span></div>
+        <div class="palette-info">
+          <div class="palette-name">Pure White</div>
+          <div class="palette-hex">#FFFFFF</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast for Copy Notification -->
+  <div class="toast" id="toastNotification">Texto copiado para a área de transferência!</div>
+
+  <script>
+    // Theme Toggle (Dark / Light)
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      themeIcon.textContent = isLight ? '🌙' : '☀️';
+      themeText.textContent = isLight ? 'Modo Escuro' : 'Modo Claro';
+    });
+
+    // Tagline Selector
+    const taglineSelector = document.getElementById('taglineSelector');
+    taglineSelector.addEventListener('change', (e) => {
+      const selectedVal = e.target.value;
+      document.querySelectorAll('.tagline-text').forEach(el => {
+        el.textContent = selectedVal;
+      });
+      showToast(`Assinatura alterada para: "${selectedVal}"`);
+    });
+
+    // Color Theme Picker (Live LED glow changes)
+    const colorDots = document.querySelectorAll('.color-dot');
+    const colorThemes = {
+      purple: { start: '#A811E7', end: '#FF007A' },
+      cyan: { start: '#00B8D9', end: '#00F0FF' },
+      green: { start: '#00B074', end: '#00FF88' },
+      gold: { start: '#FF8800', end: '#FFD700' },
+      white: { start: '#B0B0C0', end: '#FFFFFF' }
+    };
+
+    colorDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        colorDots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+
+        const colorKey = dot.dataset.color;
+        const theme = colorThemes[colorKey];
+        if (theme) {
+          document.querySelectorAll('.grad-start').forEach(s => s.setAttribute('stop-color', theme.start));
+          document.querySelectorAll('.grad-end').forEach(e => e.setAttribute('stop-color', theme.end));
+          showToast(`Tema de luz LED: ${dot.getAttribute('title')}`);
+        }
+      });
+    });
+
+    // Copy Toast Notification
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // Copy HEX
+    function copyHex(hex, name) {
+      navigator.clipboard.writeText(hex).then(() => {
+        showToast(`Código ${hex} (${name}) copiado!`);
+      });
+    }
+
+    // Copy SVG Code
+    function copySvgCode(containerId) {
+      const container = document.getElementById(containerId);
+      const svg = container.querySelector('svg');
+      if (svg) {
+        navigator.clipboard.writeText(svg.outerHTML).then(() => {
+          showToast('Código SVG copiado para a área de transferência!');
+        });
+      }
+    }
+
+    // Download SVG
+    function downloadSvg(containerId, filename) {
+      const container = document.getElementById(containerId);
+      const svg = container.querySelector('svg');
+      if (svg) {
+        const svgData = svg.outerHTML;
+        const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${filename}.svg`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+        showToast(`Download iniciado: ${filename}.svg`);
+      }
+    }
+  </script>
+</body>
+</html>
