@@ -48,13 +48,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ----------------------------------------------------------------------
-    // 2. Header Scroll Effect & Active Link Observer
+    // 2. Header Scroll Effect, Progress Bar & Active Link Observer
     // ----------------------------------------------------------------------
     const header = document.getElementById('header');
+    const scrollProgressFill = document.getElementById('scroll-progress-fill');
     const navLinks = document.querySelectorAll('.nav__link');
     const sections = document.querySelectorAll('section[id], footer[id]');
 
     function handleScroll() {
+        // Atualizar barra de progresso superior
+        if (scrollProgressFill) {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            scrollProgressFill.style.width = Math.min(Math.max(progress, 0), 100) + '%';
+        }
+
         if (!header) return;
         if (window.scrollY > 40) {
             header.classList.add('scrolled');
